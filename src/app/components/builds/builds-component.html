@@ -1,0 +1,8 @@
+  <div class="row text-white position-relative z-1">
+    <div *ngFor="let build of filteredBuilds">
+      <h4>{{ build.name }}</h4>
+      <div *ngFor="let buildOption of build.sorts">
+        <p>{{ buildOption }}</p>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Diablo';
+  src: url('../assets/fonts/diablo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1, h2 {
+  font-family: 'Diablo', sans-serif;
+}

@@ -1,0 +1,25 @@
+.items-container {
+  .item {
+    .item-image {
+      img {
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+    .item-details {
+      padding: 10px;
+      bottom: 0;
+      .item-title {
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+      .item-price {
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+      .item-description {
+        font-size: 1em;
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<div class="row text-white position-relative z-1">
+  <div *ngFor="let item of filteredItems">
+    <h2>{{ item.name }}</h2>
+    <div *ngFor="let sort of item.sorts">
+      <p>{{ sort.name }}</p>
+      <p>{{ sort.description }}</p>
+    </div>
+  </div>
+</div>

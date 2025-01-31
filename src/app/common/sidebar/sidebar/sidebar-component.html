@@ -1,0 +1,33 @@
+<div class="sidebar position-absolute bg-white h-100" [ngClass]="status ? 'open' : 'closed'">
+  <div class="z-2 position-relative sidebar-border"></div>
+  <div class="position-relative sidebar-button z-3">
+    <div class="background-button">
+      <button class="show-button" (click)="clickEvent()">
+        <div class="show-button-icon">
+          <img src="/images/button/icon-play.svg" alt="arrow" />
+        </div>
+      </button>
+    </div>
+  </div>
+  <div class="p-5">
+    <div class="text-white">
+      <div class="text-center">
+        {{ activeClass }}
+      </div>
+
+      <div class="sidebar-links">
+        <button [routerLink]="['/talents']" class="sidebar-link">
+          <strong>Talents</strong>
+        </button>
+
+        <button [routerLink]="['/paragon']" class="sidebar-link">
+          <strong>Paragon</strong>
+        </button>
+
+        <button [routerLink]="['/calculator']" class="sidebar-link">
+          <strong>Calculator</strong>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

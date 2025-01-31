@@ -1,0 +1,114 @@
+.sidebar {
+  top: 0;
+  transition: right 0.5s ease-in-out;
+  box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.24), inset 0px 2px 0px rgba(255, 255, 255, 0.06), inset 0px -1px 0px rgba(0, 0, 0, 0.24), inset 0px -2px 0px rgba(255, 255, 255, 0.06);
+  background: linear-gradient(0deg, rgba(111, 25, 6, 0) -0.01%, rgba(111, 25, 6, 0) 100%, rgba(111, 25, 6, 0.66) 67%, rgba(111, 25, 6, 0.82) 100%), radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 24.58%, rgba(0, 0, 0, 0) 49.58%, rgba(0, 0, 0, 0) 76.15%, #000 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), url(https://blz-contentstack-images.akamaized.net/v3/assets/blt77f4425de611b362/blta0ca93364e48293c/646440a2e9738c4b9d747a04/leather-texture_800.webp?auto=webp) lightgray 0% 0%/800px 800px repeat;
+  background-blend-mode: color, normal, normal, normal, normal;
+
+  /*TODO: temp*/
+  width: 550px;
+  height: 100%;
+  &.open {
+    right: 10px;
+    transition: right 0.5s ease-in-out;
+  }
+  &.closed {
+    right: -535px;
+    transition: right 0.5s ease-in-out;
+  }
+  .sidebar-button {
+    cursor: pointer;
+    transform: translate(0, 50vh);
+    .background-button {
+      background: url('../../../assets/images/icons/spiritborn-icon.png');
+      height: 60px;
+      width: 60px;
+      position: absolute;
+      left: -65px;
+      background-size: 60px 60px;
+      background-repeat: no-repeat;
+      top: -17px;
+      z-index: 1;
+      .show-button {
+        all: unset;
+        border: none;
+        background: linear-gradient( 0deg, rgba(111, 25, 6, 0) -0.01%, rgba(111, 25, 6, 0) 34.5%, rgba(111, 25, 6, 0.66) 67%, rgba(111, 25, 6, 0.82) 100%), radial-gradient( 50% 50% at 50% 50%, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient( 90deg, #000 0%, rgba(0, 0, 0, 0) 24.58%, rgba(0, 0, 0, 0) 49.58%, rgba(0, 0, 0, 0) 26.15%, #000 100%), linear-gradient( 0deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), url(https://blz-contentstack-images.akamaized.net/v3/assets/blt77f4425de611b362/blta0ca93364e48293c/646440a2e9738c4b9d747a04/leather-texture_800.webp?auto=webp) lightgray 0% 0%/800px 800px repeat;
+        background-blend-mode: color, normal, normal, normal, normal;
+        border-radius: 50%;
+        margin-left: 10px;
+        width: 41px;
+        height: 41px;
+        z-index: 2;
+        margin-top: 10px;
+        filter: brightness(0.8);
+      }
+    }
+  }
+  .sidebar-border {
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100;
+      background: url('../../../assets/images/d4-divider.webp') no-repeat;
+      transform: rotate(90deg) scale(3) translate(30%, 128%);
+      background-size: contain;
+    }
+  }
+
+  .sidebar-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 100%;
+
+    .sidebar-link {
+      all: unset;
+      background-repeat: repeat-x;
+      background-position: center center;
+      background-size: contain;
+      position: relative;
+      z-index: 1;
+      text-transform: uppercase;
+      white-space: pre-wrap;
+      text-align: center;
+      height: 72px;
+      display: block;
+      width: 200px;
+      margin: 0 auto;
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 72px;
+        width: 125px;
+        z-index: -1;
+      }
+      &:after {
+        background-image: url('../../../assets/images/button/primary-button-right.webp');
+        right: 0;
+        filter: brightness(0.8);
+      }
+      &:before {
+        background-image: url('../../../assets/images/button/primary-button-left.webp');
+        left: 0;
+        filter: brightness(0.8);
+      }
+      &:hover {
+        cursor: pointer;
+        filter: brightness(1.2);
+      }
+      strong {
+        color: white;
+        font-weight: bold;
+        line-height: 3;
+        margin-bottom: 0;
+        font-size: 1.1em;
+        font-family: 'Diablo', sans-serif;
+      }
+    }
+  }
+}

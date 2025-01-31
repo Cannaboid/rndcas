@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+@import "bootstrap/scss/bootstrap";
+@import './app/common/fonts';
+@import './app/shared/footer/footer-component';
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg-primary {
+  background-color: red;
+}
+
+.bg-secondary {
+
+}
+
+.bg-tertiary {
+
+}
+
+.color-primary {
+  color: red;
+}
+
+.color-secondary {
+
+}
+
+.color-tertiary {
+
+}
