@@ -1,0 +1,232 @@
+.test {
+  position: absolute;
+  background-color: black;
+  border: 2px solid red;
+  color: red;
+  padding: 5px 10px;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.home {
+  width: 100%;
+  display: flex;
+
+  .flex-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    transform-origin: center;
+    .top-75 {
+      top: 75%;
+    }
+    .class-sprite {
+      height: 100%;
+      width: 100%;
+      top: 0;
+      transform: scale(1);
+      transition: all 0.5s ease-in-out;
+    }
+    button,
+    h3 {
+      display: none;
+    }
+    &:hover {
+      width: 175%;
+      transition: all 0.5s ease-in-out;
+      text-align: center;
+      button {
+        all: unset;
+        background-repeat: repeat-x;
+        background-position: center center;
+        background-size: contain;
+        position: relative;
+        z-index: 1;
+        text-transform: uppercase;
+
+        white-space: pre-wrap;
+        text-align: center;
+        height: 72px;
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
+          background-repeat: no-repeat;
+          background-size: contain;
+          height: 72px;
+          width: 125px;
+          z-index: -1;
+        }
+        &:after {
+          background-image: url('../../assets/images/button/primary-button-right.webp');
+          left: 0;
+          filter: brightness(0.8);
+        }
+        &:before {
+          background-image: url('../../assets/images/button/primary-button-left.webp');
+          right: 0;
+          filter: brightness(0.8);
+        }
+        &:hover {
+          cursor: pointer;
+          filter: brightness(1.2);
+        }
+        strong {
+          color: white;
+          font-weight: bold;
+          line-height: 3;
+          margin-bottom: 0;
+          font-size: 1.2em;
+          font-family: 'Diablo', sans-serif;
+        }
+      }
+      h3 {
+        display: block;
+        font-family: 'Diablo', sans-serif;
+      }
+      .class-sprite {
+        transform: scale(1.1);
+        transition: all 0.5s ease-in-out;
+      }
+    }
+    .home-images {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 70%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: grayscale(1);
+      }
+    }
+  }
+  img {
+    &.home-images {
+
+    }
+  }
+}
+
+.flex-between {
+  justify-content: space-around;
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  .class-list {
+    display: inline-block;
+    text-align: center;
+    img {
+      width: 75px;
+      height: 75px;
+      filter: drop-shadow(1px 1px 3px black);
+      &:hover {
+        filter: brightness(1.3);
+        cursor: pointer;
+      }
+    }
+    button {
+      all: unset;
+      width: 100%;
+      font-family: 'Diablo', sans-serif;
+    }
+  }
+}
+
+
+
+.class-info {
+  .class-description {
+    color: white;
+    h2 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+      text-shadow: 2px 1px 4px black;
+    }
+    p {
+      text-shadow: 2px 1px 4px black;
+    }
+    button {
+      &.show-button {
+        all: unset;
+        background-repeat: repeat-x;
+        background-position: center center;
+        background-size: contain;
+        position: relative;
+        z-index: 1;
+        text-transform: uppercase;
+        white-space: pre-wrap;
+        text-align: center;
+        height: 72px;
+        margin-left: 50px;
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
+          background-repeat: no-repeat;
+          background-size: contain;
+          height: 72px;
+          width: 125px;
+          z-index: -1;
+        }
+        &:after {
+          background-image: url('../../assets/images/button/primary-button-right.webp');
+          left: 0;
+          filter: brightness(0.8);
+        }
+        &:before {
+          background-image: url('../../assets/images/button/primary-button-left.webp');
+          right: 0;
+          filter: brightness(0.8);
+        }
+        &:hover {
+          cursor: pointer;
+          filter: brightness(1.2);
+        }
+        strong {
+          color: white;
+          font-weight: bold;
+          line-height: 3;
+          margin-bottom: 0;
+          font-size: 1.1em;
+          font-family: 'Diablo', sans-serif;
+        }
+      }
+    }
+  }
+  .main-background-classes {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .sprite-container {
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    img {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.container-flexed-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+

@@ -1,1 +1,24 @@
-HOME
+<div class="home">
+  <div *ngFor="let className of classes" class="flex-home">
+    <div class="position-relative h-100">
+      <img src="/images/d4-classes-background.jpg" alt="Diablo 4 background" height="100%" width="100%" class="home-images"
+           (click)="logClick(); setActive(className)"/>
+      <div class="position-absolute class-sprite">
+        <img [src]="className.sprite" [alt]="className.name" height="100%" width="16%" class="home-images"
+             (click)="logClick(); setActive(className)"/>
+      </div>
+    </div>
+
+    <div class="position-absolute top-75">
+      <div class="text-white">
+        <h3>{{ className.name }}</h3>
+      </div>
+
+      <a href="/class" style="text-decoration: none" (click)="logClick(); setActive(className)">
+        <button class="show-button" (click)="logClick(); setActive(className)">
+          <strong>Select</strong>
+        </button>
+      </a>
+    </div>
+  </div>
+</div>

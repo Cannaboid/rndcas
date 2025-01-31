@@ -1,3 +1,45 @@
-<div class="row text-white position-relative z-1">
-  <h1>paragon</h1>
+<div class="class-info">
+  <div class="main-background-classes position-absolute w-100">
+    <img src="/images/d4-classes-background.jpg" alt="Diablo 4 background" height="100%" width="100%">
+  </div>
+
+  <div class="sprite-container z-0" [style.transform]="'translateX(' + translateX + 'px) translateY(' + translateY + 'px)'">
+    <img [src]="activeClassSprite" [alt]="activeClass" height="100%" width="100%">
+  </div>
+
+  <div class="container container-flexed-center">
+    <div class="row my-5">
+      <div class="col-sm-12 col-md-5 z-2">
+        <div class="flex-between">
+          <div *ngFor="let className of classes;" class="class-list">
+            <img [src]="className.icon" [alt]="className.name" height="50px" width="50px" class="mb-2"
+                 (click)="logClick(); setActive(className, $event)"/>
+          </div>
+        </div>
+
+        <div class="class-description">
+          <div class="flex-container-center">
+            <div class="my-4" [routerLinkActive]="['d-none']">
+              <h2>{{ activeClass }}</h2>
+              <p>{{ activeClassDescription }}</p>
+            </div>
+
+            <div class="mt-5 d-flex">
+              <div class="button-contain me-5">
+                <button [routerLink]="['/builds']" routerLinkActive class="show-button">
+                  <strong>Builds</strong>
+                </button>
+              </div>
+
+              <div class="button-contain">
+                <button [routerLink]="['/uniques']" routerLinkActive class="show-button">
+                  <strong>Uniques</strong>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- end container -->
 </div>

@@ -9,8 +9,11 @@ import { ItemsComponent} from './app/components/items/items.component';
 import { TalentsComponent} from './app/components/talents/talents.component';
 import { ParagonComponent} from './app/components/paragon/paragon.component';
 import { CalculatorComponent} from './app/components/calculator/calculator.component';
+import {routes} from './app/app.routes';
 
-bootstrapApplication(AppComponent).catch(err => console.error(err));
+bootstrapApplication(AppComponent, {
+  providers: [provideRouter(routes)]
+}).catch(err => console.error(err));
 
 @NgModule ({
   declarations: [
